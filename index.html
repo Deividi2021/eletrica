@@ -217,18 +217,16 @@ img{width: 90px;height: 90px}
           </div>
 
           <div class="card">
-<form action="mailto:deividi2009@gmail.com" method="POST" enctype="text/plain">
-<label for="c-nome">Nome</label>
-<input id="c-nome" name="Nome" placeholder="Seu nome" required />
-<label for="c-email">E-mail</label>
-<input id="c-email" name="Email" placeholder="seu@exemplo.com" required />
-<label for="c-msg">Mensagem</label>
-<textarea id="c-msg" name="Mensagem" rows="5" placeholder="Descreva o problema ou o serviço desejado" required></textarea>
-<div style="margin-top:12px;display:flex;gap:8px">
-<button class="btn" type="submit">Enviar mensagem</button>
-<button class="btn secondary" type="button" onclick="location.href='mailto:deividi2009@gmail.com'">Enviar por e-mail</button>
-</div>
+<form action="https://formspree.io/f/xwprprqv" method="POST">
+  <input type="text" name="nome" placeholder="Seu nome" required>
+  <input type="tel" name="telefone" placeholder="Telefone" required>
+  <select name="servico">
+    <option>Manutenção de quadros</option>
+    <option>Serviços residenciais</option>
+  </select>
+  <button type="submit">Enviar Orçamento</button>
 </form>
+
 </div>
 </div>
 </section>
