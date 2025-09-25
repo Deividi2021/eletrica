@@ -217,43 +217,32 @@ img{width: 90px;height: 90px}
           </div>
 
           <div class="card">
-            <form onsubmit="event.preventDefault(); enviarMensagem()">
-              <label for="c-nome">Nome</label>
-              <input id="c-nome" placeholder="Seu nome" required />
-              <label for="c-email">E-mail</label>
-              <input id="c-email" placeholder="seu@exemplo.com" required />
-              <label for="c-msg">Mensagem</label>
-              <textarea id="c-msg" rows="5" placeholder="Descreva o problema ou o serviço desejado" required></textarea>
-              <div style="margin-top:12px;display:flex;gap:8px">
-                <button class="btn" type="submit">Enviar mensagem</button>
-                <button class="btn secondary" type="button" onclick="location.href='mailto:deividi2009@gmail.com'">Enviar por e-mail</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+<form action="mailto:deividi2009@gmail.com" method="POST" enctype="text/plain">
+<label for="c-nome">Nome</label>
+<input id="c-nome" name="Nome" placeholder="Seu nome" required />
+<label for="c-email">E-mail</label>
+<input id="c-email" name="Email" placeholder="seu@exemplo.com" required />
+<label for="c-msg">Mensagem</label>
+<textarea id="c-msg" name="Mensagem" rows="5" placeholder="Descreva o problema ou o serviço desejado" required></textarea>
+<div style="margin-top:12px;display:flex;gap:8px">
+<button class="btn" type="submit">Enviar mensagem</button>
+<button class="btn secondary" type="button" onclick="location.href='mailto:deividi2009@gmail.com'">Enviar por e-mail</button>
+</div>
+</form>
+</div>
+</div>
+</section>
 
-      <footer>
-        © <span id="ano"></span> Energiza Elétrica  — Todos os direitos reservados • <span class="muted">Atendimento com técnico certificado</span>
-      </footer>
-    </main>
-  </div>
 
-  <script>
-    document.getElementById('ano').textContent = new Date().getFullYear();
+<footer>
+© <span id="ano"></span> Serviços Elétricos — Todos os direitos reservados • <span class="muted">Atendimento com técnico certificado</span>
+</footer>
+</main>
+</div>
 
-    function enviarOrcamento(){
-      const nome = document.getElementById('nome').value;
-      const tel = document.getElementById('telefone').value;
-      const serv = document.getElementById('servico').value;
-      alert('Orçamento enviado!\nNome: '+nome+'\nTelefone: '+tel+'\nServiço: '+serv+'\nEntraremos em contato em breve.');
-    }
-    function enviarMensagem(){
-      const nome = document.getElementById('c-nome').value;
-      const email = document.getElementById('c-email').value;
-      const msg = document.getElementById('c-msg').value;
-      alert('Mensagem enviada!\nObrigado, '+nome+'.');
-    }
-  </script>
+
+<script>
+document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
